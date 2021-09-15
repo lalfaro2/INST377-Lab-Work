@@ -71,3 +71,9 @@
   .last-item {
     order: -1;
   }
+
+  .gp-link,
+  .github {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
