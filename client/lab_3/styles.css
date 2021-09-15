@@ -41,11 +41,9 @@
     height: 300px;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
   }
 
-  .social,
-  .logo,
-  .subscribe {
-    border: 1px solid #5995DA;
+  .gp-link.github {
+    justify-content: flex-end;
   }
