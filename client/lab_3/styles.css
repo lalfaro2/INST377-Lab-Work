@@ -15,6 +15,18 @@
   .menu {
     border: 1px solid #fff;
     width: 900px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links {
+    border: 1px solid #fff;  /* For debugging */
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .main_page {
+    margin-left: 20px;
   }
 
   
