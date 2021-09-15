@@ -44,6 +44,6 @@
     align-items: center;
   }
 
-  .gp-link.github {
-    justify-content: flex-end;
+  .header .gp-link.github {
+    align-items: flex-end;
   }
