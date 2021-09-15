@@ -41,9 +41,11 @@
     height: 300px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
   }
-  
-  .gp-link {
-    align-items: flex-end;
+
+  .social,
+  .logo,
+  .subscribe {
+    border: 1px solid #5995DA;
   }
