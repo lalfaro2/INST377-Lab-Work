@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded" , () => {
     let timerId = setInterval(startGame, 20)
 
     function control(e){
-        of (e.keyCode === 32) {
+        if (e.keyCode === 32) {
             jump()
         }
     }
