@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded" , () => {
         let randomHeight = Math.random() * 60
         let obstacleBottom = randomHeight
         const obstacle = document.createElement("div")
-        obstacle.classList.add("obstacle")
+        if (!isGameOver) obstacle.classList.add("obstacle")
         display.appendChild(obstacle)
         obstacle.style.left = obstacleLeft + "px"
         obstacle.style.bottom = obstacleBottom + "px"
@@ -48,10 +48,11 @@ document.addEventListener("DOMContentLoaded" , () => {
                 obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 ||
                 birdBottom === 0){
                 gameOver()
+                clearInterval(timerId)
             }
         }
         let timerId = setInterval(moveObstacle, 20)
-        setTimeout(generateObstacle, 3000)
+        if (!isGameOver) setTimeout(generateObstacle, 3000)
     }
     generateObstacle()
 
