@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded" , () => {
         let obstacleBottom = 150
         const obstacle = document.createElement("div")
         obstacle.classList.add("obstacle")
-        gameDisplay.appendChild(obstacle)
+        display.appendChild(obstacle)
         obstacle.style.left = obstacleLeft + "px"
         obstacle.style.bottom = obstacleBottom + "px"
     }
