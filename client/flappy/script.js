@@ -14,9 +14,26 @@ document.addEventListener("DOMContentLoaded" , () => {
     }
     let timerId = setInterval(startGame, 20)
 
+    function control(e){
+        of (e.keyCode === 32) {
+            jump()
+        }
+    }
+
     function jump(){
-        birdBottom += 50
+        if (birdBottom < 500) birdBottom += 50
         bird.style.bottom = birdBottom + "px"
     }
-    document.addEventListener("keyup", jump)
+    document.addEventListener("keyup", control)
+
+    function generateObstacle() {
+        let obstacleLeft = 500
+        let obstacleBottom = 150
+        const obstacle = document.createElement("div")
+        obstacle.classList.add("obstacle")
+        gameDisplay.appendChild(obstacle)
+        obstacle.style.left = obstacleLeft + "px"
+        obstacle.style.bottom = obstacleBottom + "px"
+    }
+    generateObstacle()
 })
