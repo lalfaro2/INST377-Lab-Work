@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded" , () => {
             }
         }
         let timerId = setInterval(moveObstacle, 20)
-        if (!isGameOver) setTimeout(generateObstacle, 1000)
+        if (!isGameOver) setTimeout(generateObstacle, 2750)
     }
     generateObstacle()
 
