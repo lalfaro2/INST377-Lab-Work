@@ -55,7 +55,7 @@
   }
   
   .photo-grid {
-    width: 900px;
+    width: 300px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -117,3 +117,9 @@
     max-width: 300px;
     height: auto;
   }
+
+  .carousel .photo-grid .first-item {
+    display: block;
+  }
+
+  
