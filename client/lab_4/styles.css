@@ -101,4 +101,19 @@
   flex: initial;
   width: 300px;}
 
-  
+  .carousel {
+    overflow: hidden;
+    max-width: 300px;
+    position: relative;
+  }
+
+  .carousel .photo-grid .carousel_item,
+  .carousel .photo-grid .carousel_item--hidden {
+    display: none;
+  }
+
+  .carousel .photo-grid .carousel_item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
