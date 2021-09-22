@@ -121,3 +121,8 @@
   .carousel .photo-grid .first-item {
     display: block;
   }
+
+  .next button, .prev button {
+    margin-top: 150px;
+    font-weight: bold;
+  }
