@@ -121,8 +121,3 @@
   .carousel .photo-grid .first-item {
     display: block;
   }
-
-  .next, .prev {
-    display: flex;
-    flex-direction: row;
-  }
