@@ -107,12 +107,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function moveleft() {
+    function moveLeft() {
         isGoingLeft = true
         leftTimerId = setInterval(function () {
             doodlerLeftSpace -= 5
             doodler.style.left = doodlerLeftSpace + 'px'
-        }, 30)
+        },30)
     }
 
     function start() {
@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             createDoodler()
             setInterval (movePlatforms, 30)
             jump()
-            document.addEventListener('keyup', control)
+            document.addEventListener('keyup',control)
         }
     }
 
