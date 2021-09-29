@@ -20,7 +20,7 @@ body {
 
 .wrapper {
   display: flex;
-  background-color: lightcoral;
+  background-color: #D7A9E3FF;
   height: 580px;
 }
 .container {
@@ -34,4 +34,12 @@ body {
 
 .box2 {
   margin-top: 105px;
+}
+
+.box {
+  background-color: #8BBEE8FF;
+}
+
+.header {
+  background-color: #A8D5BAFF;
 }
