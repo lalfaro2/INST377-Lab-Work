@@ -20,8 +20,13 @@ body {
 
 .wrapper {
   display: flex;
+  background-color: lightcoral;
 }
 .container {
   max-width: 960px;
   margin-top: 25px;
+}
+
+.button {
+  background-color: lightgreen;
 }
