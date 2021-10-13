@@ -26,14 +26,17 @@ async function dataHandler() {
   }
 
   function displayMatches(event) {
-    const matchArray = findMatches(event.target.value, restaurant);
+    let matchArray = [];
+    matchArray = findMatches(event.target.value, restaurant);
+    matchArray = matchArray.slice(0, 5);
     const html = matchArray.map(food => `
-        <li>
-            <span class = 'name'>${food.name}<br></span>
-            <em><span class = 'address1'>${food.address_line_1}<br></span>
-            <span class = 'citystate'>${food.city}, ${food.state}<br></span>
-            <span class = 'zipcode'>${food.zip}</span></em>
-        </li><br>
+        <div class = finalResult>
+            <li>
+                <span class = 'name'>${food.name}<br></span>
+                <em><span class = 'address1'>${food.address_line_1}<br></span>
+                <span class = 'citystatezip'>${food.city}, ${food.state} ${food.zip}<br></span>
+            </li><br>
+        </div>
         `).join('');
     result.innerHTML = html;
   }
