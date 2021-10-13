@@ -31,15 +31,13 @@ async function dataHandler() {
     let matchArray = [];
     matchArray = findMatches(event.target.value, restaurant);
     matchArray = matchArray.slice(0, 5);
-    const testArr = matchArray.map(item => item.geocoded_column_1.coordinates);
-    console.log(testArr);
+    let locationArr = matchArray.map(item => item.geocoded_column_1.coordinates);
+    locationArr = locationArr.map(item => item.reverse());
     const html = matchArray.map(food => `
         <div class = finalResult>
-            <li>
-                <span class = 'name'>${food.name}<br></span>
-                <em><span class = 'address1'>${food.address_line_1}<br></span>
-                <span class = 'citystatezip'>${food.city}, ${food.state} ${food.zip}<br></span>
-            </li><br>
+            <span class = 'name'><strong>${food.name}</strong><br></span>
+            <em><span class = 'address1'>${food.address_line_1}<br></span>
+            <span class = 'citystatezip'>${food.city}, ${food.state} ${food.zip}<br></span>
         </div>
         `).join('');
     result.innerHTML = html;

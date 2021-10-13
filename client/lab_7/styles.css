@@ -7,6 +7,14 @@
     margin-bottom: 7px;
 }
 
+.finalResult {
+    background-color: lightcoral;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 90px;
+    margin-bottom: 13px;
+}
+
 #mapid 
 {
     height: 400px;
