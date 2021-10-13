@@ -3,6 +3,10 @@
     flex-wrap: wrap;
 }
 
+.button {
+    margin-bottom: 7px;
+}
+
 #mapid 
 {
     height: 400px;
