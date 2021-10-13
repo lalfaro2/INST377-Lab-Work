@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+}
+
+#mapid 
+{
+    height: 400px;
+    width: 400px;
+    margin-left: 500px;
+    position: fixed;
+}
