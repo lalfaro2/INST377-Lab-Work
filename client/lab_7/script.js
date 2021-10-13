@@ -8,6 +8,8 @@ function mapInit() {
     zoomOffset: -1,
     accessToken: 'pk.eyJ1Ijoibm51a2t5IiwiYSI6ImNrdXBtYXJ1NjRtazEycW56MzlmZmMxMmIifQ.CpxpF7AWl9rX_5fsi4mrJA'
   }).addTo(mymap);
+
+  var marker = L.marker([51.5, -0.09]).addTo(mymap);
 }
 
 mapInit();
@@ -29,6 +31,8 @@ async function dataHandler() {
     let matchArray = [];
     matchArray = findMatches(event.target.value, restaurant);
     matchArray = matchArray.slice(0, 5);
+    const testArr = matchArray.map(item => item.geocoded_column_1.coordinates);
+    console.log(testArr);
     const html = matchArray.map(food => `
         <div class = finalResult>
             <li>
