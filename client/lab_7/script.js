@@ -1,12 +1,8 @@
 function mapInit() {
   const mymap = L.map('mapid').setView([51.505, -0.09], 13);
-  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'your.mapbox.access.token'
+  L.tileLayer('http://{s}.tile.cloudmade.com/e7b61e61295a44a5b319ca0bd3150890/997/256/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="http://cloudmade.com">CloudMade</a>',
+    maxZoom: 18
   }).addTo(mymap);
 }
 
@@ -42,7 +38,7 @@ async function dataHandler() {
   const result = document.querySelector('.results');
 
   searchInput.addEventListener('change', displayMatches);
-  searchInput.addEventListener('keyup', (evt) => {displayMatches(evt)});
+  searchInput.addEventListener('keyup', (evt) => { displayMatches(evt) });
 }
 
 window.onload = dataHandler();
