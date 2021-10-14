@@ -1,7 +1,7 @@
-.container {
+/* .container {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 .button {
     margin-bottom: 7px;
@@ -19,6 +19,12 @@
 {
     height: 400px;
     width: 400px;
-    margin-left: 500px;
-    position: fixed;
+    /* margin-left: 500px; */
+    margin-right: 400px;
+}
+
+.idk {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

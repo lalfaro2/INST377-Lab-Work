@@ -32,7 +32,9 @@ async function dataHandler(map) {
     matchArray = matchArray.slice(0, 5);
     let locationArr = matchArray.map(item => item.geocoded_column_1.coordinates);
     locationArr = locationArr.map(item => item.reverse());
-    markers.clearLayers();
+    map.eachLayer((layer) => {
+      if (layer._latlng !== undefined) { layer.remove(); }
+    });
     map.panTo([locationArr[0][0], locationArr[0][1]]);
     L.marker([locationArr[0][0], locationArr[0][1]]).addTo(markers);
     L.marker([locationArr[1][0], locationArr[1][1]]).addTo(markers);
